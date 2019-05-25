@@ -25,7 +25,7 @@ notifications:
 install:
   - npm i
 
-before_script:
+before_install:
   - jdk_switcher use oraclejdk8
   - java -version
   - google-chrome --product-version
