@@ -31,4 +31,4 @@ before_install:
   - google-chrome --product-version
 
 script:
-  - npm run headless
+  - travis_wait 1 npm run headless
