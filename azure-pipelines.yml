@@ -14,14 +14,13 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
-  preBuild:
-      - script: |
+  
+- script: |
           wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
           sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
           sudo apt update
           sudo apt install google-chrome-stable
-        displayName: 'Install latest stable Chrome'
+        displayName: 'Install latest stable Chrome'      
 
 - script: npm install
   displayName: 'npm install'
