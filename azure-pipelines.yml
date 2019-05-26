@@ -20,7 +20,7 @@ steps:
     sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
     sudo apt update
     sudo apt install google-chrome-stable
-  displayName: 'Install latest stable Chrome'      
+  displayName: 'install latest stable Chrome'      
 
 - script: npm install
   displayName: 'npm install'
