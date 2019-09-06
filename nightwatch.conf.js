@@ -22,7 +22,8 @@ module.exports = {
     start_process: true,
     start_session: false,
     server_path: seleniumServer.path,
-    log_path: '',
+    check_process_delay: 5000,
+    log_path: 'output/logs',
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
