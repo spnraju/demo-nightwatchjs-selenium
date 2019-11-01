@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/spnraju/nightwatchjs-selenium-example#readme",
   "devDependencies": {
-    "chromedriver": "77.0.0",
+    "chromedriver": "78.0.1",
     "edgedriver": "^4.17134.1",
     "geckodriver": "^1.19.1",
     "iedriver": "^3.14.1",
