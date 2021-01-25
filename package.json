@@ -31,7 +31,7 @@
   "devDependencies": {
     "chromedriver": "87.0.4",
     "edgedriver": "^4.17134.1",
-    "geckodriver": "^1.21.1",
+    "geckodriver": "^1.22.1",
     "iedriver": "^3.150.1",
     "nightwatch": "^1.5.1",
     "selenium-server": "^3.141.59"
