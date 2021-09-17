@@ -33,7 +33,7 @@
     "edgedriver": "^4.17134.1",
     "geckodriver": "^2.0.4",
     "iedriver": "^3.150.1",
-    "nightwatch": "^1.7.8",
+    "nightwatch": "^1.7.11",
     "selenium-server": "^3.141.59"
   }
 }
