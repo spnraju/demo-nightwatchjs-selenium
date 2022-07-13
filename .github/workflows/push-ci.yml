@@ -9,33 +9,33 @@ on:
       - main
 
 jobs:
-  chromeHeadLess: 
+  ChromeHeadLess:
     name: Chrome Headless
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: 16.x
-    - run: npm install
-    - run: npm test
-  firefox: 
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm test
+  Firefox:
     name: Firefox
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: 16.x
-    - run: npm install
-    - run: npm run firefox
-  Chrome: 
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run firefox
+  Chrome:
     name: Chrome
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
-      with:
-        node-version: 16.x
-    - run: npm install
-    - run: npm run chrome
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run chrome
