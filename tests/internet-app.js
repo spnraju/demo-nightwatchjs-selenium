@@ -8,5 +8,5 @@ module.exports = {
       .assert.title('The Internet')
       .pause(5000)
       .end();
-  }
+  },
 };

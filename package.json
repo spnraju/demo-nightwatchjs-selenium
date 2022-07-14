@@ -1,5 +1,5 @@
 {
-  "name": "nightwatchjs-selenium-example",
+  "name": "demo-nightwatchjs-selenium",
   "version": "1.0.0",
   "description": "NightwatchJS with Selenium Server",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spnraju/nightwatchjs-selenium-example.git"
+    "url": "git+https://github.com/spnraju/demo-nightwatchjs-selenium.git"
   },
   "keywords": [
     "Nightwatch",
@@ -25,9 +25,9 @@
   "author": "Raju",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spnraju/nightwatchjs-selenium-example/issues"
+    "url": "https://github.com/spnraju/demo-nightwatchjs-selenium/issues"
   },
-  "homepage": "https://github.com/spnraju/nightwatchjs-selenium-example#readme",
+  "homepage": "https://github.com/spnraju/demo-nightwatchjs-selenium#readme",
   "devDependencies": {
     "chromedriver": "103.0.0",
     "edgedriver": "^4.17134.1",
