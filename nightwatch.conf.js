@@ -1,7 +1,6 @@
 const seleniumServer = require('selenium-server');
 const chromeDriver = require('chromedriver');
 const geckoDriver = require('geckodriver');
-const ieDriver = require('iedriver');
 const edgeDriver = require('edgedriver');
 
 module.exports = {
@@ -14,9 +13,9 @@ module.exports = {
   live_output: false,
   disable_colors: false,
   parallel_process_delay: 10,
-  "test_workers": {
-    "enabled": false,
-    "workers": "auto"
+  test_workers: {
+    enabled: false,
+    workers: "auto"
   },
   selenium: {
     start_process: true,
@@ -29,7 +28,6 @@ module.exports = {
     cli_args: {
       "webdriver.chrome.driver": chromeDriver.path,
       "webdriver.gecko.driver": geckoDriver.path,
-      "webdriver.ie.driver": ieDriver.path,
       "webdriver.edge.driver": edgeDriver.path
     }
   },
@@ -80,12 +78,6 @@ module.exports = {
     edge: {
       desiredCapabilities: {
         browserName: 'MicrosoftEdge',
-        javascriptEnabled: true,
-      }
-    },
-    ie: {
-      desiredCapabilities: {
-        browserName: 'internet explorer',
         javascriptEnabled: true,
       }
     }

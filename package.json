@@ -9,8 +9,7 @@
     "chrome": "nightwatch -e chrome",
     "firefox": "nightwatch -e firefox",
     "edge": "nightwatch -e edge",
-    "ie": "nightwatch -e ie",
-    "all": "nightwatch -e headlessChrome,chrome,firefox,edge,ie",
+    "all": "nightwatch -e headlessChrome,chrome,firefox,edge",
     "update": "npx npm-check-updates --upgrade && npm install && npm audit fix"
   },
   "repository": {
@@ -32,7 +31,6 @@
     "chromedriver": "103.0.0",
     "edgedriver": "^4.17134.1",
     "geckodriver": "^3.0.2",
-    "iedriver": "^4.0.0",
     "nightwatch": "^2.2.3",
     "selenium-server": "^3.141.59"
   }
