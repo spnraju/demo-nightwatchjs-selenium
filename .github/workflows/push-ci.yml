@@ -9,33 +9,21 @@ on:
       - main
 
 jobs:
-  ChromeHeadLess:
-    name: Chrome Headless
+  Nightwatchjs:
+    name: ${{ matrix.browser }}
     runs-on: windows-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        browser: [headless, firefox]
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
           node-version: 16
       - run: npm install
-      - run: npm test
-  Firefox:
-    name: Firefox
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          node-version: 16
-      - run: npm install
-      - run: npm run firefox
-  Chrome:
-    name: Chrome
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          node-version: 16
-      - run: npm install
-      - run: npm run chrome
+      - run: npm run test:${{ matrix.browser }}
+        env:
+          STANDARD: ${{ secrets.STANDARD }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+

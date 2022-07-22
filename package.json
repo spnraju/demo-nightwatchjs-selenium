@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch -e headlessChrome",
-    "headless": "nightwatch -e headlessChrome",
+    "test:headless": "nightwatch -e headlessChrome",
     "chrome": "nightwatch -e chrome",
-    "firefox": "nightwatch -e firefox",
+    "test:firefox": "nightwatch -e firefox",
     "edge": "nightwatch -e edge",
     "all": "nightwatch -e headlessChrome,chrome,firefox,edge",
-    "update": "npx npm-check-updates --upgrade && npm install && npm audit fix"
+    "update": "npx npm-check-updates --upgrade && npm install && npm audit fix",
+    "lint": "eslint --ext .js . --fix",
+    "prettier": "prettier **/*.js --write"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,13 @@
   "homepage": "https://github.com/spnraju/demo-nightwatchjs-selenium#readme",
   "devDependencies": {
     "chromedriver": "103.0.0",
+    "dotenv": "^16.0.1",
     "edgedriver": "^4.17134.1",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
     "geckodriver": "^3.0.2",
     "nightwatch": "^2.2.3",
+    "prettier": "^2.7.1",
     "selenium-server": "^3.141.59"
   }
 }
