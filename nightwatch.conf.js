@@ -3,6 +3,8 @@ const chromeDriver = require('chromedriver');
 const geckoDriver = require('geckodriver');
 const edgeDriver = require('edgedriver');
 
+require('dotenv').config()
+
 module.exports = {
   src_folders: ['tests'],
   output_folder: 'output/reports',
@@ -15,7 +17,7 @@ module.exports = {
   parallel_process_delay: 10,
   test_workers: {
     enabled: false,
-    workers: "auto"
+    workers: 'auto',
   },
   selenium: {
     start_process: true,
@@ -26,24 +28,24 @@ module.exports = {
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
-      "webdriver.chrome.driver": chromeDriver.path,
-      "webdriver.gecko.driver": geckoDriver.path,
-      "webdriver.edge.driver": edgeDriver.path
-    }
+      'webdriver.chrome.driver': chromeDriver.path,
+      'webdriver.gecko.driver': geckoDriver.path,
+      'webdriver.edge.driver': edgeDriver.path,
+    },
   },
   test_settings: {
     skip_testcases_on_fail: false,
     end_session_on_fail: false,
     default: {
-      "screenshots": {
-        "enabled": true,
-        "on_failure": true,
-        "on_error": false,
-        "path": "output/screenshots"
+      screenshots: {
+        enabled: true,
+        on_failure: true,
+        on_error: false,
+        path: 'output/screenshots',
       },
       desiredCapabilities: {
         browserName: 'chrome',
-      }
+      },
     },
     headlessChrome: {
       desiredCapabilities: {
@@ -52,9 +54,9 @@ module.exports = {
         acceptSslCerts: true,
         chromeOptions: {
           w3c: false,
-          args: ['headless', 'disable-gpu']
-        }
-      }
+          args: ['headless', 'disable-gpu'],
+        },
+      },
     },
     chrome: {
       desiredCapabilities: {
@@ -63,23 +65,26 @@ module.exports = {
         acceptSslCerts: true,
         chromeOptions: {
           w3c: false,
-          args: ['disable-gpu']
-        }
-      }
+          args: ['disable-gpu'],
+        },
+      },
     },
     firefox: {
       desiredCapabilities: {
         browserName: 'firefox',
         javascriptEnabled: true,
         acceptSslCerts: true,
-        marionette: true
-      }
+        marionette: true,
+        'moz:firefoxOptions': {
+          args: ['-headless'],
+        }
+      },
     },
     edge: {
       desiredCapabilities: {
         browserName: 'MicrosoftEdge',
         javascriptEnabled: true,
-      }
-    }
-  }
+      },
+    },
+  },
 };

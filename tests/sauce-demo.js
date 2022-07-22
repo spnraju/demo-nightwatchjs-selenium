@@ -1,19 +1,17 @@
 module.exports = {
   tags: ['sauce-demo'],
-  'Demo test Sauce demo': function (client) {
-    client
+  'Sauce demo login': function (browser) {
+    browser
       .url('https://www.saucedemo.com/')
       .waitForElementVisible('body', 1000)
-      .getTitle(function (result) {
-        client.assert.equal(
-          result.indexOf('Swag Labs'),
-          0,
-          'Page title starts with nightwatch'
-        );
-      });
-  },
-
-  after: function (client) {
-    client.end();
+      .assert.titleContains('Swag Labs')
+      .assert.visible('#user-name')
+      .assert.visible('#login-button')
+      .setValue('#user-name', process.env.STANDARD)
+      .setValue('#password', process.env.PASSWORD)
+      .click('#login-button')
+      .waitForElementVisible('.app_logo')
+      .assert.visible('.app_logo')
+      .end();
   },
 };

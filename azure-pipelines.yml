@@ -1,17 +1,30 @@
 trigger:
   - main
 
+strategy:
+  matrix:
+    mac:
+      imageName: 'macOS-latest'
+    windows:
+      imageName: 'windows-latest'
+
+variables:
+- group: "Saucedemo"
+
 pool:
-  vmImage: "macOS-latest"
+  vmImage:  $(imageName)
 
 steps:
   - task: NodeTool@0
     inputs:
       versionSpec: "16"
-    displayName: "Install Node.js"
+    displayName: "Install Nodejs"
 
   - script: npm install
     displayName: "npm install"
 
-  - script: npm run test
+  - script: npm run test:headless
     displayName: "npm test"
+    env:
+      STANDARD: ${STANDARD}
+      PASSWORD: ${PASSWORD}
