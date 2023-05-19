@@ -32,11 +32,11 @@
   "devDependencies": {
     "chromedriver": "113.0.0",
     "dotenv": "^16.0.3",
-    "edgedriver": "^4.17134.1",
-    "eslint": "^8.40.0",
+    "edgedriver": "^5.2.1",
+    "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
-    "geckodriver": "^3.2.0",
-    "nightwatch": "^2.6.20",
+    "geckodriver": "^4.0.0",
+    "nightwatch": "^2.6.21",
     "prettier": "^2.8.8",
     "selenium-server": "^3.141.59"
   }
