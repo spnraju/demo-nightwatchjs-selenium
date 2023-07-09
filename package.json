@@ -10,7 +10,7 @@
     "test:firefox": "nightwatch -e firefox",
     "edge": "nightwatch -e edge",
     "all": "nightwatch -e headlessChrome,chrome,firefox,edge",
-    "update": "npx npm-check-updates --upgrade && npm install && npm audit fix",
+    "update": "npm update --save",
     "lint": "eslint --ext .js . --fix",
     "prettier": "prettier **/*.js --write"
   },
