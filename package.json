@@ -31,12 +31,12 @@
   "homepage": "https://github.com/spnraju/demo-nightwatchjs-selenium#readme",
   "devDependencies": {
     "chromedriver": "113.0.0",
-    "dotenv": "^16.0.3",
-    "edgedriver": "^5.2.1",
-    "eslint": "^8.41.0",
-    "eslint-config-prettier": "^8.8.0",
-    "geckodriver": "^4.0.0",
-    "nightwatch": "^2.6.21",
+    "dotenv": "^16.4.5",
+    "edgedriver": "^5.3.10",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
+    "geckodriver": "^4.3.3",
+    "nightwatch": "^2.6.25",
     "prettier": "^2.8.8",
     "selenium-server": "^3.141.59"
   }
