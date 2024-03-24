@@ -20,9 +20,9 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
-          node-version: 16
-      - run: npm install
-      - run: npm run test:${{ matrix.browser }}
+          node-version: 20
+      - run: yarn install
+      - run: yarn run test:${{ matrix.browser }}
         env:
           STANDARD: ${{ secrets.STANDARD }}
           PASSWORD: ${{ secrets.PASSWORD }}
